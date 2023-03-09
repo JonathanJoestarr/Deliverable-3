@@ -1,59 +1,80 @@
-/**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
- */
+
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
-/**
- * A concrete class that represents any grouping of cards for a Game. HINT, you might want to subclass this more than
- * once. The group of cards has a maximum size attribute which is flexible for reuse.
- *
- * @author dancye
- * @author Paul Bonenfant Jan 2020
- */
 public class GroupOfCards {
     
 public static void main (String [] args){    
 
-    //The group of cards, stored in an ArrayList
+    Scanner Warinput = new Scanner(System.in);
+
+    
     private ArrayList<Card> cards;
-    private int size;//the size of the grouping
+    private int decksize;
 
-    public GroupOfCards(int size) {
-        this.size = size;
+    public GroupOfCards(int decksize) {
         int[] size = {51};
+        int[] cardvalues = {0,1,2,3,4,5,6,7,8,9,10,11,12,13};
+        int player1score = 0;
+        int player2score = 0;
+        GroupOfCards End = new GroupOfCards();
+        
+        for(int player1draw = 0; player1hand < 27; player1hand++){
+            
+            System.out.printf("%2d", (int)(Math.random() * 13));
+            
+            if(player1hand > 0){   
+            cardvalues[player1hand];
+            
+            if(player1hand > player2hand){
+            player1score = player1score + 1;
+            }
+            }
+            
+        }
+        
+           for(int player2hand = 0; player2hand < 27; player2hand++){
+           
+            System.out.printf("%2d", (int)(Math.random() * 13));
+               
+            if(player2hand > 0){   
+            cardvalues[player2hand];
+            
+            if(player2hand > player1hand){
+            player2score = player2score + 1;
+            }
+            }
+            
+        } 
+        
     }
-
+           
+    public int End(){
+        if(player1hand < 27){
+         
+            System.out.println(player1score); 
+        }
+        
+        if(player2hand < 27){
+            
+            System.out.println(player2score);
+        }
+        
+            if(player1score > player2score){
+                
+                System.out.println("Congrats" + name1, "you have won the game!");
+                
+            }
+            else(player2score > playey1score){
+                
+                System.out.println("Congrats" + name2, "you have won the game!");
+        
+            }
+        
+    }
 }
-    /**
-     * A method that will get the group of cards as an ArrayList
-     *
-     * @return the group of cards.
-     */
-    public ArrayList<Card> getCards() {
-        return cards;
-    }
-
-    public void shuffle() {
-        Collections.shuffle(cards);
-    }
-
-    /**
-     * @return the size of the group of cards
-     */
-    public int getSize() {
-        return size;
-    }
-
-    /**
-     * @param size the max size for the group of cards
-     */
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-}//end class
+        
+}
