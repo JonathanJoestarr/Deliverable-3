@@ -2,7 +2,7 @@ package ca.sheridancollege.project;
 
 import java.util.Scanner;
 
-public abstract class Player {
+public class Player {
 
     Scanner Warinput = new Scanner(System.in);
 
