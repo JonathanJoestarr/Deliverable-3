@@ -16,6 +16,8 @@ import java.util.Collections;
  * @author Paul Bonenfant Jan 2020
  */
 public class GroupOfCards {
+    
+public static void main (String [] args){    
 
     //The group of cards, stored in an ArrayList
     private ArrayList<Card> cards;
@@ -23,9 +25,10 @@ public class GroupOfCards {
 
     public GroupOfCards(int size) {
         this.size = size;
-        size = 51;
+        int[] size = {51};
     }
 
+}
     /**
      * A method that will get the group of cards as an ArrayList
      *

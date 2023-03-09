@@ -22,6 +22,7 @@ public abstract class Player {
      */
     public Player(String name) {
         this.name = name;
+        name = player;
     }
 
     /**
@@ -46,4 +47,8 @@ public abstract class Player {
      */
     public abstract void play();
 
+}
+
+public abstract void player();
+player = 2;
 }
